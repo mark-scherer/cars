@@ -1,0 +1,28 @@
+{
+  "name": "cars",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mark-scherer/cars.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mark-scherer/cars/issues"
+  },
+  "homepage": "https://github.com/mark-scherer/cars#readme",
+  "dependencies": {
+    "bluebird": "^3.7.2",
+    "csv-parser": "^3.0.0",
+    "csv-stringify": "^5.5.3",
+    "lodash": "^4.17.20",
+    "pg": "^8.5.1",
+    "request": "^2.88.2",
+    "yesql": "^4.1.3"
+  }
+}
