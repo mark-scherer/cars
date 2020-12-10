@@ -1,0 +1,46 @@
+{
+  "scrape_configs": {
+    
+    "grand_cherokee": {
+      "min_year": 2011,
+      "max_miles": 100000,
+      "max_price": 18000,
+      "radius": 200,
+      "scrape_params": {
+        "auto_trader": {
+          "make": "JEEP",
+          "model": "JEEPGRAND"
+        },
+        "autolist": {
+          "make": "Jeep",
+          "model": "Grand+Cherokee"
+        }
+      }
+    },
+
+    "compass": {
+      "min_year": 2017,
+      "max_miles": 100000,
+      "max_price": 18000,
+      "radius": 200,
+      "scrape_params": {
+        "auto_trader": {
+          "make": "JEEP",
+          "model": "COMPASS"
+        }
+      }
+    }
+  },
+
+
+  "naming_configs": {
+    "grand_cherokee": {
+      "make": "jeep",
+      "model": "grand_cherokee"
+    },
+    "compass": {
+      "make": "jeep",
+      "model": "compass"
+    }
+  }
+}

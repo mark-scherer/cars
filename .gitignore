@@ -1,0 +1,7 @@
+node_modules/
+results/
+incl/archive*
+*.zip
+*.DS_Store
+incl/config_secret.json
+package-lock.json
