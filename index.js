@@ -1,5 +1,8 @@
 /*
   Handler for running scrape inside aws lambda
+
+  To update lambda code, upload to s3 bucket (mark-scherer-personal) then:
+    aws lambda update-function-code --function-name cars --s3-bucket mark-scherer-personal --s3-key lambda/cars/cars.zip
 */
 
 const scrape = require('./scripts/scrape')

@@ -8,12 +8,21 @@
       "radius": 200,
       "scrape_params": {
         "auto_trader": {
-          "make": "JEEP",
-          "model": "JEEPGRAND"
+          "makeCodeList": "JEEP",
+          "modelCodeList": "JEEPGRAND"
         },
         "autolist": {
           "make": "Jeep",
           "model": "Grand+Cherokee"
+        },
+        "cars.com": {
+          "mkId": 20021,
+          "mdId": 21222,
+          "mlgId": 28863
+        },
+        "edmunds": {
+          "make": "jeep",
+          "model": "grand-cherokee"
         }
       }
     },
@@ -25,8 +34,21 @@
       "radius": 200,
       "scrape_params": {
         "auto_trader": {
-          "make": "JEEP",
-          "model": "COMPASS"
+          "makeCodeList": "JEEP",
+          "modelCodeList": "COMPASS"
+        },
+        "autolist": {
+          "make": "Jeep",
+          "model": "Compass"
+        },
+        "cars.com": {
+          "mkId": 20021,
+          "mdId": 20864,
+          "mlgId": 28863
+        },
+        "edmunds": {
+          "make": "jeep",
+          "model": "compass"
         }
       }
     }

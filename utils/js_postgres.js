@@ -32,12 +32,20 @@ const query = function(query_str, data, name='default') {
   return new Promise((resolve, reject) => {
     let formatted_query
     try {
-      formatted_query = named(query_str)(data)
+      formatted_query = named(query_str, { useNullForMissing: true })(data)
     } catch (parse_error) {
-      return reject(`Postgres util: error parsing query: ${JSON.stringify({query_str, parse_error})}`)
+      return reject(`Postgres util: error parsing query: ${JSON.stringify({
+        parse_error: String(parse_error),
+        query_str,
+        data
+      })}`)
     }
     pools[name].query(formatted_query.text, formatted_query.values, (err, result) => {
-      if (err) return reject(err)
+      if (err) return reject(`Postgres util: error running query: ${JSON.stringify({
+        error: String(err),
+        query_str,
+        data
+      })}`)
       return resolve(result)
     })
   })
