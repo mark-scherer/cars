@@ -1,0 +1,62 @@
+{
+    "filters_for_csv": {
+        "models": ["grand_cherokee", "compass"],
+        "color_not": ["orange", "green", "tan"],
+        "active": true,
+        "not_sold": true,
+        "max_miles": 60000,
+        "min_miles": 5000,
+        "max_price": 17000,
+        "min_price": 1,
+        "min_year_by_model": {
+            "grand_cherokee": 2011,
+            "compass": 2018
+        }
+    },
+    "filters_for_plot": {
+        "models": ["grand_cherokee", "compass"],
+        "color_not": ["orange", "green", "tan"],
+        "not_sold": true,
+        "max_miles": 60000,
+        "min_miles": 5000,
+        "max_price": 17000,
+        "min_price": 1,
+        "min_year_by_model": {
+            "grand_cherokee": 2011,
+            "compass": 2018
+        }
+    },
+    "sort": {
+        "price": 1,
+        "mileage": 0.033,
+        "drivetrain": {
+            "4x4": -2500
+        },
+        "color": {
+            "gray": -750,
+            "white": -600,
+            "black": -600,
+            "silver": -500
+        },
+        "model": {
+            "grand_cherokee": 2000
+        },
+        "version": {
+            "limited": -500
+        },
+        "distance_by_dealer": {
+            "texas direct auto": {
+                "flat_fee": 600,
+                "per_mile": 0
+            },
+            "carmax": {
+                "flat_fee": 0,
+                "per_mile": 0.75
+            },
+            "default": {
+                "flat_fee": 0,
+                "per_mile": 0.5
+            }
+        }
+    }
+}

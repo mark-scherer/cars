@@ -1,0 +1,369 @@
+##### top ranked listings summary ###
+- updated 1/11/2021
+
+### reminders ###
+1. calc'd score is incomplete! Does not reflect:
+    a. accident history
+    b. maintence history
+    c. cosmetic damage
+    d. price / value
+2. Compass trim heirarchy
+    a. sport        : 16" wheels
+    b. latitude     : sport plus auto lights, roof rails, leather interior accents, 17" wheels
+    c. alitude      : latitude plus blacked grill
+    d. limited      : latitude plus 18" wheels, heated, power adjust seats, leather interior, 7" driver display, autodimming rearview mirror, remote start
+    e. trailhawk    : latitude plus tow hooks, better off roading, full size spare, blacked hood, 115V AC outlet 7" 'color cluster' display, 8" Uconnect touchscreen
+3. Compass Factory Warranty
+    - 3yr/36k mile basic
+    - 5yr/60k mile powertrain
+4. Common 2018 Compass issues
+    a. instrument cluster & UConnect display does not dim at night
+    b. UConnect crashes
+    c. Car will stall mid-driving
+        - Jeep issued recall for voltage regulator in Aug 2018 (https://static.nhtsa.gov/odi/rcl/2018/RCLRPT-18V524-7331.PDF)
+    e. execessive oil burn (1 quart per 1k miles)
+    f. transmission issues
+5. Car buying checklist
+    a. deep dive from all available sources, log here
+        - include word from Bobby, if not Carfax
+    b. ask salesperson questions 
+        i. cost to ship? (remote only)
+        ii. virtual tour (remote only)
+        iii. allow independent inspection?
+    c. independent mechanic inspection
+    d. prepare insurance
+    e. rank & buy
+6. Delivery policies
+    1. Texas Direct Auto
+        - $600 nonrefundable delivery fee
+        - takes up to 2 weeks
+        - 7 days after delivery to decide
+        - independent inspections allowed only on car on main lot
+            - can check by filtering by 'test drive available' on: https://www.texasdirectauto.com/cars
+    2. Carmax
+        - up to $2k nonrefundable delivery fee (highly dependent on distance)
+            - ex: Columbus, OH: $2000 (2.4k miles)
+            - ex: Lexington, KY: $2000 (2.4k miles)
+            - ex: Merrillville, IN: $1500k (2.1k)
+            - ex: Reno, NV: $100 (200 miles)
+        - can take over 2 weeks (highly dependent on distance)
+        - can test drive after transfer
+
+### top available vehicles: 1/14/2021 ###
+1. 3C4NJDBB8JT144649
+    - 2018 silver 2018 compass Latitude 4x4
+    - $16.5k, 31k miles
+    - texas direct auto 
+        - $599 delivery fee
+        - NOT available for inspection
+    - features
+        - leather accented interior
+        - touchscreen center console, digital dashboard
+        - heated & power seats, wheel
+        - remote start
+        - 2.4L 4cyl w/ 9 speed auto
+        - compact spare..?
+        - 115V outlet
+        - autodimming rearview mirror
+    - damages
+        - slight driver's seat stain
+        - light scratch on passenger door
+        - light scrath on driver headlight, rear
+    - carfax report
+        - leased in NJ from 1 owner
+        - no issues reported
+        - Oct 2020: suspension/steering checks, sway bar link replace
+        - Dec 2020: last service: PCM reprogrammed (power train control module)
+    - kelly blue book
+        - trade in range: $12k - $13.5k
+        - private party: $14k - $16k
+        <- autodirect values at $18k (10% discount)
+    - timeline
+        - 1/13/2021: messaged Jose for availability, price
+        - 1/14/2021: steve messaged saying vehicle is in PA
+        - 1/14/2021: steve messaged saying vehilce is in MI
+
+
+2. 3C4NJDBB2JT150267
+    - 2018 white compass latitude 4x4
+    - $17k, 25k miles
+    - texas direct auto
+        - $599 delivery fee
+        - NOT available for inspection
+    - features
+        - 9 speed automatic
+    - damages
+        - none
+    - timeline
+        - 1/13/2021: messaged Jose for availability, price
+        - 1/14/2021: vroom shows sale pending
+
+3. 3C4NJDBB2JT284423
+    - 2018 black compass latitude 4x4 
+    - $17k, 30k miles
+    - texas direct auto
+        - $599 delivery fee
+        - NOT available for inspection
+    - features
+        - 9 speed automatic
+    - damages
+        - dent on passenger door
+        - scratch on passenger side rear wheel
+        - dent on driver door
+        - small chip on hood
+    - timeline
+
+### end available vehicles: 1/14/2021
+
+
+
+### top available vehicles: 1/13/2021 ###
+- actions 
+    1. messaged Jose at Texas Direct Auto about #1 & #3
+    2. inquired thru edmunds about Carmax's #2, #4, #5
+- plan
+    1. call carmax tomorrow to ask about availability, shipping, independent inspection, etc
+    2. confirm availabilities of Texas direct auto with Jose
+    3. finalize rankings <- check for any newcomers
+    4. make moves?
+
+
+1. 3C4NJDBB8JT144649
+    - 2018 silver 2018 compass Latitude 4x4
+    - $16.5k, 31k miles
+    - texas direct auto 
+        - $599 delivery fee
+        - NOT available for inspection
+    - features
+        - leather accented interior
+        - touchscreen center console, digital dashboard
+        - heated & power seats, wheel
+        - remote start
+        - 2.4L 4cyl w/ 9 speed auto
+        - compact spare..?
+        - 115V outlet
+        - autodimming rearview mirror
+    - damages
+        - slight driver's seat stain
+        - light scratch on passenger door
+        - light scrath on driver headlight, rear
+    - timeline
+        - 1/13/2021: messaged Jose for availability, price
+
+2. 3C4NJDBB7JT162284
+    - 2018 gray compass latitude 4x4
+    - $17k, 25k miles
+    - Carmax columbus
+        - <$1k delivery fee
+        - stock #: 19946663
+        - $2k transfer
+    - features
+        - heated seats, wheel
+        - 9 speed automatic
+    - damages
+        -
+    - timeline
+        - 1/13/2021: requested info thru edmunds
+        - 1/13/2021: edmunds responded saying dealer will contact me
+        - 1/13/2021: Carson from carmax serramonte called, I missed
+
+3. 3C4NJDBB2JT150267
+    - 2018 white compass latitude 4x4
+    - $17k, 25k miles
+    - texas direct auto
+        - $599 delivery fee
+        - NOT available for inspection
+    - features
+        - 9 speed automatic
+    - damages
+        - none
+    - timeline
+        - 1/13/2021: messaged Jose for availability, price
+
+4. 3C4NJDBB8JT107598
+    - 2018 black compass latitude 4x4
+    - $17k, 25k miles
+    - carmax Merrillville, IN
+        - <$1k delivery fee
+        - stock #: 19775251
+        - $1500 transfer fee
+    - features
+        - heated seats, wheel
+        - remote start
+        - 9 speed automatic
+    - damages
+        - 
+    - timeline
+        - 1/13/2021: requested info thru edmunds
+        - 1/13/2021: edmunds responded saying dealer will contact me
+
+5. 3C4NJDBB8JT239518
+    - 2018 white compass latitude 4x4
+    - $17k, 30k miles
+    - carmax Lexington, KY
+        - <$1k delivery fee
+        - stock #: 19967742
+        - $2k 
+    - features
+        - heated seats, wheel
+        - remote start
+    - damages
+        -
+    - timeline
+        - 1/13/2021: request info thru edmunds
+        - 1/13/2021: edmunds responded saying dealer will contact me
+
+### end available vehicles: 1/13/2021
+
+
+
+
+
+### checked vehciles ###
+1. 3C4NJCABXJT169645 (rank: 1)
+    - 2018 silver Compass Sport FWD
+    - 50k miles, $13k
+        - no delivery fee
+    - features
+        - 2.4L 4cyl w/ 6 speed automatic
+        - tech group
+            - 115V outlet
+            - 7" Uconnect touchscreen
+            - dual AC
+        - sport appearance plus
+            - roof rails
+            - deep tint
+    - carfax
+        - looks like 2 owners
+        - no reported issues
+    - checked 1/11/2021
+        - found for 42 days
+            - edmunds says available for 96 days with $4k price drop
+        - found on: auto_trader, edmunds, autolist
+    - Freeman Toyota (Santa Rosa)
+        - 1/11/2021: inquired on autolist
+        - 1/12/2021: salesmen responded, offered test drive
+        - 1/12/2021: I responded asking about independent mechanic inspection
+        - 1/13/2021: salesman saying they allow inspection
+        - 1/13/2020: salesman called to say had sold
+    - independent inspections
+        - called "Onsite Auto Repair", said did preinnspections for $140 but was busy til monday. Needed me to bring it in
+            - reccomended Bowen's auto
+        - Bowen's auto offered inspections for $159
+            - takes ~1hr
+            - should call in morning with timing
+            - must bring car to shop
+
+2. 3C4NJDBB1JT150261 (rank: 3)
+    - 2018 gray Compass Latitude 4x4
+    - 20k miles, $17k
+        - ~$1k delivery fee
+    - features
+        - 2.4L 4cyl w/ 9 speed automatic
+        - heated seats, steering wheel
+        - remote start 
+        - two tone fabric interior
+    - carfax
+        - not available
+    - checked 1/11/2021
+        - found for 20 days
+            - autolist says 68 days w/ $2k price drop
+        - found on: autolist, edmunds
+    - Texas Direct Auto (Stafford, TX)
+        - 1/11/2021: inquired on autolist
+        - 1/11/2021: autolist responded saying seller will contact me (Vroom)
+        - 1/11/2021: vroom sent auto-gen'd message offering to schedule a call
+        - 1/12/2021: salsesperson sent email
+        - 1/12/2021: responded to initial salesmen response repeating questions
+        - 1/13/2021: called Jose Pena from vroom, said this model sold but gave details about vroom:
+            - $599 delivery fee, takes up to 2 weeks
+            - have 7 days post delivery before can return but $599 delivery fee not refunded
+            - do allow vehicle inspections for vehicles stocked on location
+                - can check if on location via: https://www.texasdirectauto.com/cars <- filter to test drive available
+                - mechanic must go to dealer
+
+3. 3C4NJDBBXJT177183 (rank: 12)
+    - 2018 silver Compass Latitude 4x4
+    - $16.5k, 35k
+        - ~$1k delivery fee
+    - features
+        - 2.4L 4cyl w/ 9 speed automatic
+        - heated, power adjust seats, steering wheel
+        - remote start
+        - 7" Uconnect touchscreen & 7" driver display
+        - 115V outlet
+        - autodimming rearview mirror
+    - carfax
+        - not available
+    - checked on 1/11/2021
+        - found for 40 days
+            - edmunds says 129 days w/ no price change
+            - autolist says 129 days with $2.5k price drop
+        - found on edmunds, autolist
+    - Texas Direct Auto (Stafford, TX)
+        - inquired 1/11/2021 on autolist
+            - 1/11/2021: autolist responded saying seller will contact me (Vroom)
+            - 1/11/2021: vroom sent auto-gen'd message offering to schedule a call
+            - 1/12/2021: scheduled call for 12:30 wed 1/13/2021
+            - 1/13/2021: model sold
+
+4. 3C4NJCBB0JT226871 (rank: 2)
+    - 2018 gray Compass Latitude FWD
+    - 25k miles, $16k
+        - no delivery fee
+    - features
+        - 2.4L 4cyl w/ 6 speed automatic
+    - carfax
+        - not available
+    - checked 1/12/2021
+        - found for 25 days
+            - autolist says 21 days on market with no price change 
+            - edmunds says 71 days on market with no price change
+    - Dublin Toyota (Dublin, CA)
+        - 1/12/2021: inquired thru autolist
+        - 1/12/2021: autolist responded saying seller will contact me
+        - 1/12/2021: delaer responded saying they would allow 3rd party check
+
+-  3C4NJDBB3JT136491 (rank: 17)
+    - 2018 white compass Latitude 4x4
+    - $17k, 30k miles
+        - ~$1k delivery fee
+    - features 
+        - heated, power adjust seats, steering wheel
+        - remote start
+    - cosmetic defects
+        - ~2 inch paint scratch on lower left trunk
+    - carfax not available
+    - checked on 1/11/2021
+        - found for 1 day
+            - edmunds says available for 25 days with no price change
+        - found on: edmunds
+    - CarMax Columbus Sawmill (Columbus, OH)
+        - 1/11/2021: inquired  thru edmunds
+        - 1/11/2021: edmunds sent auto-gen'd message saying dealer had been contacted 
+        - 1/11/2021: carmax emailed me about vehicle
+        - 1/12/2021: carmax lists as 'currently unavailable'
+
+- 3C4NJDBB2JT150608 (rank: 11)
+    - 2018 silver Compass Latitude 4x4
+    - $16.5k, 35k miles
+        - ~$1k delivery fee
+    - features
+        - 2.4L
+        - heated seats, steering wheel
+        - remote start
+        - roof rails
+    - carfax
+        - not available
+    - checked 1/11/2021
+        - found for 29 days
+            - autolist says 62 days with $2k price drop
+        - found on: autolist
+    - Texas Direct Auto (Stafford, TX)
+        - 1/11/2021: inquired on autolist
+        - 1/12/2021: autolist said no longer available
+
+- 3C4NJDBB8JT154842 (rank: 69)
+    - 2018 silver compass Latitude 4x4
+    - $17k, 25k miles
+    - edmunds says not listed 1/11/2021

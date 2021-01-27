@@ -23,6 +23,10 @@
         "edmunds": {
           "make": "jeep",
           "model": "grand-cherokee"
+        },
+        "carvana": {
+          "url_model": "jeep-grand-cherokee",
+          "filter_hash": "eyJtb2RlbElkcyI6WzcxXSwieWVhciI6eyJtaW4iOjIwMTEsIm1heCI6MjAyMX0sInByaWNlIjp7Im1pbiI6Njk5MCwibWF4IjoxODAwMH0sIm1pbGVhZ2UiOnsibWluIjowLCJtYXgiOjEwMDAwMH19"
         }
       }
     },
@@ -49,6 +53,10 @@
         "edmunds": {
           "make": "jeep",
           "model": "compass"
+        },
+        "carvana": {
+          "url_model": "jeep-compass",
+          "filter_hash": "eyJ5ZWFyIjp7Im1pbiI6MjAxMSwibWF4IjoyMDIxfSwicHJpY2UiOnsibWluIjo2OTkwLCJtYXgiOjE4MDAwfSwibWlsZWFnZSI6eyJtaW4iOjAsIm1heCI6MTAwMDAwfSwibW9kZWxJZHMiOlsyMjFdfQ"
         }
       }
     }

@@ -43,7 +43,7 @@ const make_request = function(request_options, other_options={}) {
   return new Promise((resolve, reject) => {
     request(request_options, (error, response, body) => {
       if (error) return reject(error)
-      if (response.statusCode !== 200) return reject(`non-200 statusCode: ${response.statusCode}`)
+      if (response.statusCode !== 200) return reject(`non-200 statusCode: ${JSON.stringify({..._.pick(response, ['statusCode']), request_options})}`)
 
       if (other_options.skip_parse) return resolve(body)
 

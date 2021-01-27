@@ -46,7 +46,7 @@ const query = function(query_str, data, name='default') {
         query_str,
         data
       })}`)
-      return resolve(result)
+      return resolve(result.rows)
     })
   })
 }

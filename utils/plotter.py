@@ -166,6 +166,20 @@ def _make_line_plot(
 	if y_axis_format:
 		_format_axis(ax, 'y', y_axis_format)
 
+def _make_hist(
+	data,
+	ax,
+	x_func,
+	title,
+	x_axis_format
+):
+	_x = [x_func(v) for v in data]
+	ax.hist(_x)
+	ax.set_title(title)
+	
+	if x_axis_format:
+		_format_axis(ax, 'x', x_axis_format)
+
 
 
 # optional params handled by generic methods:
@@ -260,3 +274,19 @@ def single_line_plot(
 	_save_figure(fig, title)
 	plt.show()
 
+def single_histogram(
+	data, x_func,
+	title,
+	x_axis_format
+):
+	fig, ax = plt.subplots(figsize=SINGLE_FIGURE_SIZE)
+	_format_figure(False)
+	_make_hist(
+		data,
+		ax,
+		x_func,
+		title,
+		x_axis_format
+	)
+	_save_figure(fig, title)
+	plt.show()

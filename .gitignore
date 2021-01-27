@@ -1,5 +1,4 @@
 node_modules/
-results/
 incl/archive*
 *.zip
 *.DS_Store

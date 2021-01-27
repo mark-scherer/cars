@@ -1,6 +1,7 @@
 /*
-  Scrape to do
-    1. implement more scrapers
+  scrape
+
+  Scrapes various sites & inserts into DB on params included in imported config
 */
 
 'use strict'
@@ -9,6 +10,7 @@ const fs                = require('fs')
 const _                 = require('lodash')
 const Bluebird          = require('bluebird')
 const request           = require('request')
+const cheerio           = require('cheerio')
 const js_utils          = require('../utils/js_utils')
 const pg                = require('../utils/js_postgres')
 const argv              = require('minimist')(process.argv.slice(2))
@@ -30,8 +32,10 @@ const MAX_API_HITS                  = 50
 const ENDPOINTS = {
   auto_trader : 'https://www.autotrader.com/rest/searchresults/base',
   autolist    : 'https://www.autolist.com/search',
-  'cars.com'  : 'https://www.cars.com/for-sale/listings/',
+  // 'cars.com'  : 'https://www.cars.com/for-sale/listings/',
+  'cars.com'  : 'https://www.cars.com/for-sale/searchresults.action/',
   edmunds     : 'https://www.edmunds.com/gateway/api/purchasefunnel/v1/srp/inventory',
+  carvana     : 'https://www.carvana.com/cars/'
 }
 
 const AUTO_TRADER_FIELDS_TO_KEEP = [
@@ -211,6 +215,9 @@ const scrape_autolist = async function(scrape_configs, location_config, model) {
 
 // notes
   // cannot replicate endpoint's year filter, must do after gathering results
+// NOT WORKING
+  // local & lambda getting 503s
+// quick check showed 0/5 top results were not found elsewhere
 const scrape_cars_dot_com = async function(scrape_configs, location_config, model) {
   const source = 'cars.com'
   const {model_config, scrape_config} = get_model_configs(scrape_configs, location_config, model, source)
@@ -220,14 +227,16 @@ const scrape_cars_dot_com = async function(scrape_configs, location_config, mode
     ...CURL_USER_AGENT    // request times out with default user-agent
   }
   const qs = {
-    ..._.pick(scrape_config, ['mkId', 'mdId', 'mlgId']),
+    // ..._.pick(scrape_config, ['mkId', 'mdId', 'mlgId']),
+    ..._.pick(scrape_config, ['mkId', 'mdId']),
     prMx            : model_config.max_price,
     zc              : location_config.zip,
     rd              : model_config.radius,
-    sort            : 'price-lowest',
-    perPage         : 100,
-    returnRecs      : false,
-    searchSource    : 'PAGINATION'
+    // sort            : 'price-lowest',
+    // perPage         : 100,
+    // returnRecs      : false,
+    searchSource    : 'QUICK_FORM',
+    stkTypId        : 28881
   }
   const options = {
     url     : ENDPOINTS[source],
@@ -243,8 +252,12 @@ const scrape_cars_dot_com = async function(scrape_configs, location_config, mode
     while (continue_scrape) {
       if (api_hits >= MAX_API_HITS) throw Error(`max api hits exceeded, stopping scrape: ${JSON.stringify({ api_hits, MAX_API_HITS, page })}`)
 
-      options.qs.page = page
-      const response = await js_utils.make_request(options)
+      // options.qs.page = page
+      const response = await js_utils.make_request(options, {skip_parse: true})
+
+      console.log(response)
+      process.exit(0)
+
       scrape_results = scrape_results.concat(response.dtm.vehicle)
 
       continue_scrape = response.json.pagination.numberOfPages > page
@@ -347,16 +360,57 @@ const scrape_edmunds = async function(scrape_configs, location_config, model) {
   })
 }
 
-// good candiate
-const scrape_car_gurus = async function(scrape_configs, location_config, model) { }
+const scrape_carvana = async function(scrape_configs, location_config, model) { 
+  const source = 'carvana'
+  const {model_config, scrape_config} = get_model_configs(scrape_configs, location_config, model, source)
+
+  const headers = {
+    ...DEFAULT_HEADERS,
+  }
+  const qs = {
+    cvnaid  : scrape_config.filter_hash
+  }
+  const options = {
+    url     : `${ENDPOINTS[source]}/${scrape_config.url_model}/filters`,
+    method  : 'GET',
+    timeout : TIMEOUT,
+    headers,
+    qs
+  }
+
+  let scrape_results = []
+  try {
+    const response = await js_utils.make_request(options, {skip_parse: true})
+    const $ = cheerio.load(response)
+    $('script[data-react-helmet="true"][type="application/ld+json"]').each((index, result) => {
+      const parsed_result = JSON.parse($(result).html())
+      if (parsed_result.vehicleIdentificationNumber) scrape_results.push(parsed_result)
+    })
+  } catch (scrape_error) {
+    const scrape_error_str = JSON.stringify(scrape_error) !== '[object Object]' && JSON.stringify(scrape_error) !== '{}' ? JSON.stringify(scrape_error) : String(scrape_error)
+    console.error(`error scraping, skipping source: ${JSON.stringify({ source, scrape_error_str })}`)
+  }
+
+  return _.map(scrape_results, listing =>  {
+    return {
+      vin           : listing.vehicleIdentificationNumber,
+      year          : parseInt(listing.modelDate),
+      title         : listing.name,
+      price         : parseInt(listing.offers.price),
+      mileage       : parseInt(listing.mileageFromOdometer),
+      remote        : false,
+      scrape_time   : (new Date()).toString(),
+      source
+    }
+  })
+}
 
 // good candiate
+  // quick check showed 0/5 top results were not found elsewhere
 const scrape_truecar = async function(scrape_configs, location_config, model) { }
 
-// good candidate
-const scrape_carvana = async function(scrape_configs, location_config, model) { }
-
 // need to filter post-request: mileage, year, price
+  // quick check showed 0/5 legit (w/ photos) top results were not found elsewhere
 const scrape_carfax = async function(scrape_configs, location_config, model) { }
 
 /*
@@ -369,6 +423,11 @@ const scrape_carmax = async function(scrape_configs, location_config, model) {
         // also can only enter search params in UI, recorded by cookies...
     // with JS disabled, site is unusable... can't apply any search filters
 }
+
+/*
+  hard: search results don't show vin
+*/
+const scrape_car_gurus = async function(scrape_configs, location_config, model) { }
 
 const setup_scrape = async function() {
   const HEADLESS_URLS = [
@@ -395,10 +454,16 @@ const scrape = async function(scrape_configs, location_config, model) {
   // await setup_scrape() // removed puppeteer, was too big for lambda
   let results = {}
 
-  results.auto_trader = await scrape_auto_trader(scrape_configs, location_config, model)
-  results.autolist    = await scrape_autolist(scrape_configs, location_config, model)
-  results.cars_dot_com    = await scrape_cars_dot_com(scrape_configs, location_config, model)
-  // results.edmunds    = await scrape_edmunds(scrape_configs, location_config, model) // lambda IP gets denied... tried to use headless browser to simuluate normal traffic but chromium is too big for lambda
+  // working
+  // results.auto_trader = await scrape_auto_trader(scrape_configs, location_config, model)
+  // results.autolist    = await scrape_autolist(scrape_configs, location_config, model)
+  // results.carvana     = await scrape_carvana(scrape_configs, location_config, model)
+
+  // known issue: lambda IP gets denied... tried to use headless browser to simuluate normal traffic but chromium is too big for lambda
+  results.edmunds     = await scrape_edmunds(scrape_configs, location_config, model) 
+  
+  // issue: local & lambda getting 503s
+  // results.cars_dot_com    = await scrape_cars_dot_com(scrape_configs, location_config, model)
 
   const total = _.reduce(results, (sum, source_results, source) => sum + source_results.length, 0)
   const source_counts = _.chain(results)
@@ -466,7 +531,6 @@ const insert_results = async function(results, model) {
 }
 
 pg.connect(config.pg_config)
-
 
 const scrape_and_log = async () => {
   js_utils.require_args(argv, REQUIRED_ARGS)
